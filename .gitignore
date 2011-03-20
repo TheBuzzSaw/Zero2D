@@ -1,0 +1,12 @@
+*.exe
+*.dll
+*.lib
+*.a
+*.o
+/data/logs/*.txt
+/projects/obj/
+/projects/*.html
+/projects/*.depend
+/projects/*.layout
+/projects/*.cbTemp
+

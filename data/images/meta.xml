@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<sprite>
+    <sheet file="smb3.png">
+        <region id="walk-left-1" x="4" y="82" w="16" h="27" />
+        <region id="walk-left-2" x="34" y="82" w="16" h="27" />
+    </sheet>
+    <animation id="walk-left">
+        <frame region="walk-left-1" duration="10" />
+        <frame region="walk-left-2" duration="10" />
+    </animation>
+</sprite>
