@@ -5,6 +5,8 @@
 #include "Exception.h"
 #include "Sound.h"
 
+#include <curl/curl.h>
+
 #include <SDL_ttf.h>
 #include <SDL_net.h>
 #include <SDL_mixer.h>
@@ -128,6 +130,7 @@ namespace CGE
             SDL_Delay(1); // prevent CPU abuse
         }
 
+        inModule.disableAllEnums();
         inModule.onClose();
     }
 
@@ -216,8 +219,6 @@ namespace CGE
             exit(1);
         }
 
-
-
         if (TTF_Init() == -1)
         {
             cerr << "-- error on TTF_Init -- " << TTF_GetError() << endl;
@@ -225,13 +226,14 @@ namespace CGE
             exit(1);
         }
 
-		// SDL_net temporarily disabled due to OSX
         if (SDLNet_Init() == -1)
         {
             cerr << "-- error on SDLNet_Init -- " << SDLNet_GetError() << endl;
             fout.close();
             exit(1);
         }
+
+        curl_global_init(CURL_GLOBAL_ALL);
 
         if (mSettings.sound)
         {

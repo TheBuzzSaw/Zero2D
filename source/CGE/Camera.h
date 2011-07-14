@@ -15,8 +15,12 @@ namespace CGE
             inline const mat4f& matrix() { return mMatrix; }
             void update();
             void setDistance(float inDistance);
+            void changeDistance(float inOffset);
             void setRotation(float inRotation);
+            void changeRotation(float inOffset);
             void setAngle(float inAngle);
+            void changeAngle(float inOffset);
+            void setPosition(float inX, float inY, float inZ);
 
         private:
             mat4f mMatrix;

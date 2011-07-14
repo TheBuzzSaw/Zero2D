@@ -23,6 +23,8 @@ namespace CGE
             virtual void onPulse();
             virtual void onSecond(Uint32 inFramesPerSecond);
 
+            void enable(GLenum inEnum);
+
             /// input events
             virtual void onInputFocus();
             virtual void onInputBlur();
@@ -56,6 +58,12 @@ namespace CGE
 
         protected:
             bool mRunning;
+
+        private:
+            void disableAllEnums();
+
+            GLenum mEnums[32];
+            GLenum* mNextEnum;
     };
 
 }

@@ -1,4 +1,5 @@
 #include "Download.h"
+
 #include <curl/curl.h>
 
 namespace CGE

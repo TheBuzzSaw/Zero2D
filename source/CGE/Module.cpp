@@ -2,7 +2,7 @@
 
 namespace CGE
 {
-    Module::Module() : mRunning(true)
+    Module::Module() : mRunning(true), mNextEnum(mEnums)
     {
     }
 
@@ -30,6 +30,22 @@ namespace CGE
 
     void Module::onSecond(Uint32 inFramesPerSecond)
     {
+    }
+
+    void Module::enable(GLenum inEnum)
+    {
+        if (!inEnum) return;
+
+        glEnable(inEnum);
+        *mNextEnum++ = inEnum;
+    }
+
+    void Module::disableAllEnums()
+    {
+        for (GLenum* i = mNextEnum - 1; i >= mEnums; --i)
+            glDisable(*i);
+
+        mNextEnum = mEnums;
     }
 
     /// event handlers

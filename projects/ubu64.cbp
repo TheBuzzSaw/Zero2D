@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="A2D (ubu64)" />
+		<Option title="Zero2D (ubu64)" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="../a2d-ubu64-debug" prefix_auto="1" extension_auto="1" />
+				<Option output="../zero2d-ubu64-debug" prefix_auto="1" extension_auto="1" />
 				<Option working_dir=".." />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
@@ -17,7 +17,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="../a2d-ubu64" prefix_auto="1" extension_auto="1" />
+				<Option output="../zero2d-ubu64" prefix_auto="1" extension_auto="1" />
 				<Option working_dir=".." />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
@@ -47,10 +47,13 @@
 			<Add library="lua5.1" />
 			<Add library="curl" />
 		</Linker>
+		<Unit filename="../source/CGE/Camera.cpp" />
+		<Unit filename="../source/CGE/Camera.h" />
 		<Unit filename="../source/CGE/ClusterVBO.cpp" />
 		<Unit filename="../source/CGE/ClusterVBO.h" />
 		<Unit filename="../source/CGE/CubeMap.cpp" />
 		<Unit filename="../source/CGE/CubeMap.h" />
+		<Unit filename="../source/CGE/Debug.h" />
 		<Unit filename="../source/CGE/Download.cpp" />
 		<Unit filename="../source/CGE/Download.h" />
 		<Unit filename="../source/CGE/Engine.cpp" />
@@ -61,6 +64,7 @@
 		<Unit filename="../source/CGE/Font.h" />
 		<Unit filename="../source/CGE/FragmentShader.cpp" />
 		<Unit filename="../source/CGE/FragmentShader.h" />
+		<Unit filename="../source/CGE/Graphics.cpp" />
 		<Unit filename="../source/CGE/Graphics.h" />
 		<Unit filename="../source/CGE/Image.cpp" />
 		<Unit filename="../source/CGE/Image.h" />
@@ -98,6 +102,8 @@
 		<Unit filename="../source/CGE/Thread.h" />
 		<Unit filename="../source/CGE/Tools.cpp" />
 		<Unit filename="../source/CGE/Tools.h" />
+		<Unit filename="../source/CGE/Upload.cpp" />
+		<Unit filename="../source/CGE/Upload.h" />
 		<Unit filename="../source/CGE/Vectors.h" />
 		<Unit filename="../source/CGE/VertexArrayObject.cpp" />
 		<Unit filename="../source/CGE/VertexArrayObject.h" />

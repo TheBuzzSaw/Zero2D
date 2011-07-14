@@ -1,5 +1,6 @@
 #include "Image.h"
 #include "Exception.h"
+#include "Debug.h"
 
 #include <SDL_image.h>
 
