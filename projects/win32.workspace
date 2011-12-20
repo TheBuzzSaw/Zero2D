@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_workspace_file>
+	<Workspace title="Workspace">
+		<Project filename="win32.cbp" active="1" />
+		<Project filename="../../cyborus-game-engine/projects/win32.cbp" />
+	</Workspace>
+</CodeBlocks_workspace_file>
