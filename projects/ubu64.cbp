@@ -40,6 +40,7 @@
 			<Add option="-Wall" />
 			<Add directory="../../cyborus-game-engine/" />
 			<Add directory="/usr/include/SDL" />
+			<Add directory="/usr/include/lua5.1" />
 		</Compiler>
 		<Linker>
 			<Add library="SDLmain" />
@@ -53,7 +54,13 @@
 			<Add library="openal" />
 			<Add directory="../../cyborus-game-engine/" />
 		</Linker>
+		<Unit filename="../source/Entity2D.cpp" />
+		<Unit filename="../source/Entity2D.h" />
 		<Unit filename="../source/main.cpp" />
+		<Unit filename="../source/rapidxml/rapidxml.hpp" />
+		<Unit filename="../source/rapidxml/rapidxml_iterators.hpp" />
+		<Unit filename="../source/rapidxml/rapidxml_print.hpp" />
+		<Unit filename="../source/rapidxml/rapidxml_utils.hpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
