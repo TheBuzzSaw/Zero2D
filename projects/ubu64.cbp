@@ -54,8 +54,16 @@
 			<Add library="openal" />
 			<Add directory="../../cyborus-game-engine/" />
 		</Linker>
+		<Unit filename="../source/Actor2D.cpp" />
+		<Unit filename="../source/Actor2D.h" />
 		<Unit filename="../source/Entity2D.cpp" />
 		<Unit filename="../source/Entity2D.h" />
+		<Unit filename="../source/RenderBin2D.cpp" />
+		<Unit filename="../source/RenderBin2D.h" />
+		<Unit filename="../source/SpriteActor.cpp" />
+		<Unit filename="../source/SpriteActor.h" />
+		<Unit filename="../source/SpriteBin.cpp" />
+		<Unit filename="../source/SpriteBin.h" />
 		<Unit filename="../source/main.cpp" />
 		<Unit filename="../source/rapidxml/rapidxml.hpp" />
 		<Unit filename="../source/rapidxml/rapidxml_iterators.hpp" />
