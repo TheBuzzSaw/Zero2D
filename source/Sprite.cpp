@@ -139,6 +139,18 @@ Sprite::Sprite(const char* inPath)
 
 Sprite::~Sprite()
 {
+    for (map<string, Animation>::const_iterator i = mAnimations.begin();
+        i != mAnimations.end(); ++i)
+    {
+        Frame* frame = i->second.firstFrame;
+
+        while (frame)
+        {
+            Frame* deadFrame = frame;
+            frame = frame->nextFrame;
+            delete deadFrame;
+        }
+    }
 }
 
 ostream& operator<<(ostream& inStream, const Sprite::Region& inRegion)
