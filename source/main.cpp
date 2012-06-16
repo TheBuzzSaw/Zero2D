@@ -1,3 +1,4 @@
+#include "Sprite.h"
 #include <CGE/Engine.h>
 
 int main(int argc, char** argv)
@@ -9,6 +10,9 @@ int main(int argc, char** argv)
 
     CGE::Module m;
 
-    e.run(m);
+    //e.run(m);
+
+    Sprite sprite("data/images/");
+
     return 0;
 }

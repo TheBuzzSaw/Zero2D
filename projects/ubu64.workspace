@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_workspace_file>
 	<Workspace title="Workspace">
-		<Project filename="ubu64.cbp" active="1" />
+		<Project filename="ubu64.cbp" active="1">
+			<Depends filename="../../cyborus-game-engine/projects/ubu64.cbp" />
+		</Project>
 		<Project filename="../../cyborus-game-engine/projects/ubu64.cbp" />
 	</Workspace>
 </CodeBlocks_workspace_file>
