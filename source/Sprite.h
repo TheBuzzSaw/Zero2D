@@ -1,6 +1,7 @@
 #ifndef SPRITE_H
 #define SPRITE_H
 
+#include <CGE/Memory.h>
 #include <map>
 #include <string>
 #include <iostream>

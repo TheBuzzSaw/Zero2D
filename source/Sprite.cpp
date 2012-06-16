@@ -1,11 +1,13 @@
 #include "Sprite.h"
 #include "rapidxml/rapidxml.hpp"
+#include <CGE/Heap.h>
 #include <CGE/Tools.h>
 #include <iostream>
 
 using namespace rapidxml;
 using namespace std;
 
+static CGE::Heap SpriteHeap("Sprite");
 static const char* const SheetNode = "sheet";
 static const char* const RegionNode = "region";
 static const char* const AnimationNode = "animation";
@@ -112,7 +114,8 @@ Sprite::Sprite(const char* inPath)
 
                     if (region)
                     {
-                        Frame* frame = new Frame;
+                        Frame* frame = (Frame*)
+                            CGE::allocate(sizeof(Frame), SpriteHeap);
                         frame->region = region;
                         frame->nextFrame = NULL;
                         CGE::tryParse(duration, frame->duration);
@@ -135,6 +138,8 @@ Sprite::Sprite(const char* inPath)
             }
         }
     }
+
+    CGE::release(content);
 }
 
 Sprite::~Sprite()
@@ -148,7 +153,7 @@ Sprite::~Sprite()
         {
             Frame* deadFrame = frame;
             frame = frame->nextFrame;
-            delete deadFrame;
+            CGE::release(deadFrame);
         }
     }
 }
