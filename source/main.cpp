@@ -1,4 +1,5 @@
 #include "Sprite.h"
+#include "GameModule.h"
 #include <CGE/Engine.h>
 #include <CGE/Heap.h>
 
@@ -10,11 +11,11 @@ int main(int argc, char** argv)
 
         CGE::Engine e(s);
 
-        //CGE::Module m;
+        GameModule gm;
 
-        //e.run(m);
+        e.run(gm);
 
-        Sprite sprite("data/images/");
+        //Sprite sprite("data/images/");
     }
 
     CGE::Heap::dump();

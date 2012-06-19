@@ -54,6 +54,10 @@
 			<Add library="openal" />
 			<Add directory="../../cyborus-game-engine/" />
 		</Linker>
+		<Unit filename="../source/GameModule.cpp" />
+		<Unit filename="../source/GameModule.h" />
+		<Unit filename="../source/Sheet.cpp" />
+		<Unit filename="../source/Sheet.h" />
 		<Unit filename="../source/Sprite.cpp" />
 		<Unit filename="../source/Sprite.h" />
 		<Unit filename="../source/main.cpp" />
